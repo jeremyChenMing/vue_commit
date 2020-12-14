@@ -4,7 +4,8 @@ import router from "./router";
 import store from "./store";
 
 Vue.config.productionTip = false;
-
+// const _ = require("lodash");
+require("lodash");
 new Vue({
   router,
   store,

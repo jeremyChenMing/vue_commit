@@ -1,6 +1,14 @@
 <!-- vt -->
 <template>
-  <div class="about">about {{ value }}</div>
+  <div class="about">
+    about {{ value }}
+  
+  <ul>
+    <li v-for="(item,index) in arr" :key="index">{{item}}{{index + 1}}</li>
+  </ul>
+  
+  </div>
+
 </template>
 
 <script>
@@ -10,7 +18,8 @@ export default {
   components: {},
   data() {
     return {
-      value: 1
+      value: 1,
+      arr: new Array(10).fill('-')
     };
   },
   //监听属性 类似于data概念
@@ -18,7 +27,9 @@ export default {
   //监控data中的数据变化
   watch: {},
   methods: {},
-  created() {},
+  created() {
+    
+  },
   mounted() {}
 };
 </script>
